@@ -1,0 +1,128 @@
+:root{
+    --background: #d8d8d8;
+    --purple-color: #5c3fda;
+    --purple-color-01: #2d2068;
+    --gray-color: rgb(56, 56, 56);
+    --white-color: #e7e7e7;
+}
+
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--background);
+}
+
+.title{
+    font-size: 55px;
+    text-align: center;
+    color: var(--purple-color-01);
+    
+}
+
+.subtitle{
+    text-align: center;
+    margin-top: -10px;
+    color: rgba(0, 0, 0, .7);
+}
+.form-container,
+.form-password{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.form{
+    width: 450px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-password{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: auto;
+    margin-bottom: 10px;
+    min-width: 250px;
+    max-width: 500px;
+}
+
+.password{
+    padding: 10px;
+    outline: none;
+    border: none;
+    color: var(--purple-color);
+    text-align: center;
+    background-color: var(--background);
+    font-size: 20px;
+    width: 450px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 15px;
+}
+.password-generate,
+.password-copy{
+    padding: 10px;
+    margin-top: 5px;
+    outline: none;
+    cursor: pointer;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.password-generate{
+    background-color: var(--purple-color-01);
+    color: var(--white-color);
+    border: 1px solid var(--button-border);
+}
+
+.password-copy{
+    background-color: var(--background);
+    border: 1px solid #a1a1a1;
+}
+
+.form-fields{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.form-input{
+    outline: none;
+}
+
+
+/* Etiquetas donde se mostrará el total de caracteres */
+
+.long-total{
+    margin: 0 5px;
+    color: var(--gray-color);
+}
+
+.legend{
+    color: var(--gray-color);
+    text-align: center;
+    margin-top: 10px;
+    font-size: 10px;
+    width: 60%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  
+    .password{
+        width: 340px;
+    }
+    
+  }

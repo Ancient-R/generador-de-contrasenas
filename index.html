@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Generador de contrasenas</title>
+</head>
+<body>
+    
+    <div class="form-container">
+        <h1 class="title">Generador de contraseñas</h1>
+        <h2 class="subtitle">Genera contraseñas fuertes y únicas con un click</h2>
+        <form class="form" id="form">
+
+            <div class="form-password">
+                <textarea 
+                    id="show-password" 
+                    class="password" 
+                    cols="60" 
+                    rows="4"
+                    disabled=true
+                ></textarea>
+                <!-- <input 
+                    type="text" 
+                    class="password"
+                    disabled="true"
+                    id="show-password"
+                /> -->
+                <button 
+                    class="password-generate"
+                    id="password-generate"
+                >Generar contraseña</button>
+                <button 
+                    class="password-copy"
+                    id="password-copy"
+                >Copiar contraseña</button>
+            </div>
+
+            <div id="fields">
+                
+                <div class="form-fields">
+                    <label for="" class="form-label">a-z</label>
+                    <input 
+                    class="form-input"
+                    checked="true"
+                    type="checkbox"
+                    id="minus-check"
+                    >
+                    
+                    <input 
+                    type="range"
+                    id="minus-range"
+                    min="1"
+                    max="32"
+                    step="1"
+                    value="8"
+                    >
+                    <label for="" class="long-total" id="minus-total">8</label>
+                </div>
+    
+                <div class="form-fields">
+                    <label for="" class="form-label">A-Z</label>
+                    <input 
+                        class="form-input"
+                        type="checkbox"
+                        id="mayus-check"
+                    >
+    
+                    <input 
+                        type="range"
+                        id="mayus-range"
+                        min="1"
+                        value="1"
+                        max="32"
+                    >
+
+                    <label for="" class="long-total" id="mayus-total">1</label>
+                </div>
+    
+                <div class="form-fields">
+                    <label for="" class="form-label">0-9</label>
+                    <input 
+                        type="checkbox"
+                        class="form-input"
+                        id="numbers-check"
+                    >
+    
+                    <input 
+                        type="range"
+                        id="numbers-range"
+                        min="1"
+                        value="1"
+                        max="32"
+                    >
+
+                    <label for="" class="long-total" id="numbers-total">1</label>
+                </div>
+    
+                <div class="form-fields">
+                    <label for="" class="form-label">#$%&/()=</label>
+                    <input 
+                        type="checkbox"
+                        class="form-input"
+                        id="symbols-check"
+                    >
+                    <input 
+                        type="range"
+                        id="symbols-range"
+                        min="1"
+                        value="1"
+                        max="32"
+                    >
+
+                    <label for="" class="long-total" id="symbols-total">1</label>
+                </div>
+            </div>
+
+            <small class="legend">Contraseñas generadas localmente con JavaScript, esto quiere decir que ninguna contraseña se almacena</small>
+        </form>
+    </div>
+
+    <script src="./scripts/variables.js"></script>
+    <script src="./scripts/helper.js"></script>
+    <script src="./scripts/js.js"></script>
+</body>
+</html>
