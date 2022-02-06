@@ -11,8 +11,10 @@
     
     <div class="form-container">
         <h1 class="title">Generador de contraseñas</h1>
-        <h2 class="subtitle">Genera contraseñas fuertes y únicas con un click</h2>
+        <h2 class="subtitle">Utiliza este generador para obtener de forma rápida y sencilla una contraseña única</h2>
         <form class="form" id="form">
+
+            <p class="copied" id="copied">copiado</p>
 
             <div class="form-password">
                 <textarea 
@@ -22,12 +24,7 @@
                     rows="4"
                     disabled=true
                 ></textarea>
-                <!-- <input 
-                    type="text" 
-                    class="password"
-                    disabled="true"
-                    id="show-password"
-                /> -->
+        
                 <button 
                     class="password-generate"
                     id="password-generate"
@@ -38,16 +35,18 @@
                 >Copiar contraseña</button>
             </div>
 
-            <div id="fields">
+            <div id="fields" class="fields">
                 
                 <div class="form-fields">
-                    <label for="" class="form-label">a-z</label>
-                    <input 
-                    class="form-input"
-                    checked="true"
-                    type="checkbox"
-                    id="minus-check"
-                    >
+                    <div class="label-container">
+                        <label for="" class="form-label">Minúsculas: </label>
+                        <input 
+                            class="form-input"
+                            checked="true"
+                            type="checkbox"
+                            id="minus-check"
+                        >
+                    </div>
                     
                     <input 
                     type="range"
@@ -61,12 +60,14 @@
                 </div>
     
                 <div class="form-fields">
-                    <label for="" class="form-label">A-Z</label>
-                    <input 
-                        class="form-input"
-                        type="checkbox"
-                        id="mayus-check"
-                    >
+                    <div class="label-container">
+                        <label for="" class="form-label">Mayúsculas: </label>
+                        <input 
+                            class="form-input"
+                            type="checkbox"
+                            id="mayus-check"
+                        >
+                    </div>
     
                     <input 
                         type="range"
@@ -80,12 +81,14 @@
                 </div>
     
                 <div class="form-fields">
-                    <label for="" class="form-label">0-9</label>
-                    <input 
-                        type="checkbox"
-                        class="form-input"
-                        id="numbers-check"
-                    >
+                    <div class="label-container">
+                        <label for="" class="form-label">Números: </label>
+                        <input 
+                            type="checkbox"
+                            class="form-input"
+                            id="numbers-check"
+                        >
+                    </div>
     
                     <input 
                         type="range"
@@ -99,12 +102,14 @@
                 </div>
     
                 <div class="form-fields">
-                    <label for="" class="form-label">#$%&/()=</label>
-                    <input 
-                        type="checkbox"
-                        class="form-input"
-                        id="symbols-check"
-                    >
+                    <div class="label-container">
+                        <label for="" class="form-label">Símbolos: </label>
+                        <input 
+                            type="checkbox"
+                            class="form-input"
+                            id="symbols-check"
+                        >
+                    </div>
                     <input 
                         type="range"
                         id="symbols-range"
@@ -117,7 +122,6 @@
                 </div>
             </div>
 
-            <small class="legend">Contraseñas generadas localmente con JavaScript, esto quiere decir que ninguna contraseña se almacena</small>
         </form>
     </div>
 

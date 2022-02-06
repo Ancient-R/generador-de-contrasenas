@@ -33,7 +33,12 @@ buttonCopy.addEventListener('click', e => {
         .catch( error => console.log(error));
 
     navigator.clipboard.writeText( showPassword.value )
-        .then(() => alert('Contraseña copiada'))
+        .then(() => {
+            copiedAlert.classList.add('show-message');
+            setTimeout(() => {
+                copiedAlert.classList.remove('show-message');
+            }, 3000);
+        })
         .catch( () => alert('Ha ocurrido un error'));
 });
 

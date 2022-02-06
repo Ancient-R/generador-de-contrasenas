@@ -1,7 +1,7 @@
 :root{
-    --background: #d8d8d8;
-    --purple-color: #5c3fda;
-    --purple-color-01: #2d2068;
+    --background: #171B26;
+    --acent-color: #2D6F77;
+    --acent-color-01: #214B58;
     --gray-color: rgb(56, 56, 56);
     --white-color: #e7e7e7;
 }
@@ -12,19 +12,20 @@ body{
     height: 100vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: var(--background);
+    color: var(--white-color);
 }
 
 .title{
-    font-size: 55px;
+    font-size: 50px;
     text-align: center;
-    color: var(--purple-color-01);
+    color: var(--acent-color-01);
     
 }
 
 .subtitle{
     text-align: center;
     margin-top: -10px;
-    color: rgba(0, 0, 0, .7);
+    width: 370px;
 }
 .form-container,
 .form-password{
@@ -46,6 +47,31 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+}
+
+.copied{
+    background-color: var(--acent-color);
+    padding: 6px;
+    border-radius: 3px;
+    position: absolute;
+    top: -25px;
+    opacity: 0;
+}
+
+.show-message{
+    opacity: 1;
+    animation: fadein 0.8s ease-in;
+}
+
+@keyframes fadein {
+    0%{
+        transform: translateY(-25px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
 }
 
 .form-password{
@@ -62,13 +88,14 @@ body{
     padding: 10px;
     outline: none;
     border: none;
-    color: var(--purple-color);
+    color: var(--acent-color);
     text-align: center;
     background-color: var(--background);
     font-size: 20px;
     width: 450px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-bottom: 15px;
+    resize: none;
 }
 .password-generate,
 .password-copy{
@@ -82,21 +109,32 @@ body{
 }
 
 .password-generate{
-    background-color: var(--purple-color-01);
+    background-color: var(--acent-color-01);
     color: var(--white-color);
     border: 1px solid var(--button-border);
 }
 
 .password-copy{
     background-color: var(--background);
-    border: 1px solid #a1a1a1;
+    border: 1px solid var(--acent-color-01);
+    color: var(--white-color);
 }
 
+.fields{
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    margin-top: 20px;
+}
 .form-fields{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     margin-bottom: 10px;
+}
+
+.label-container{
+    width: 120px;
 }
 
 .form-input{
@@ -108,15 +146,7 @@ body{
 
 .long-total{
     margin: 0 5px;
-    color: var(--gray-color);
-}
-
-.legend{
-    color: var(--gray-color);
-    text-align: center;
-    margin-top: 10px;
-    font-size: 10px;
-    width: 60%;
+    color: var(--acent-color);
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {

@@ -20,6 +20,8 @@ const showPassword = document.getElementById('show-password');
 const buttonGenerate = document.getElementById('password-generate');
 // botón que copia la contraseña
 const buttonCopy = document.getElementById('password-copy');
+// alerta
+const copiedAlert = document.getElementById('copied');
 
 
 // total minúsculas
